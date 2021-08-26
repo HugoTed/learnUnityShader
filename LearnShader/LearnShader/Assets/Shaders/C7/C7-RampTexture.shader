@@ -1,7 +1,7 @@
 ﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 // Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
-Shader "Unity Shader Book/Chapter 7/C7-RampTexture"
+Shader "Unity Shaders Book/Chapter 7/C7-RampTexture"
 {
 	Properties
 	{

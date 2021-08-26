@@ -72,17 +72,21 @@
 				tangentNormal.z = sqrt(1.0 - saturate(dot(tangentNormal.xy,tangentNormal.xy)));
 
 				fixed3 albedo = tex2D(_MainTex,i.uv).rgb * _Color.rgb;
-				fixed3 diffuse = _lightColor0.rgb * albedo * saturate(dot(tangentNormal,tangentLightDir));
+
+				fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz * albedo;
+
+				fixed3 diffuse = _LightColor0.rgb * albedo * saturate(dot(tangentNormal,tangentLightDir));
 
 				fixed3 halfDir = normalize(tangentLightDir + tangentViewDir);
 
 				fixed specularMask = tex2D(_SpecularMask,i.uv).r * _SpecularScale;
-				fixed3 specular = _lightColor0.rgb *_Specular.rgb * pow(staturate(dot(tangentNormal,halfDir)),_Gloss) * specularMask;
-				return fixed4(albedo + diffuse + specular, 1.0);
+				fixed3 specular = _LightColor0.rgb *_Specular.rgb * pow(saturate(dot(tangentNormal,halfDir)),_Gloss) * specularMask;
+				return fixed4(ambient + diffuse + specular, 1.0);
 			}
 
 			
 			ENDCG
 		}
 	}
+	Fallback "Specular"
 }
