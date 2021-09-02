@@ -1,0 +1,36 @@
+Base path: 'C:/Program Files/Unity/Hub/Editor/2019.4.28f1c1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.4.28f1c1/Editor/Data/PlaybackEngines'
+Cmd: initializeCompiler
+Cmd: preprocess
+  insize=2184 outsize=525 ok=1
+Cmd: preprocess
+  insize=2678 outsize=871 ok=1
+Cmd: preprocess
+  insize=2712 outsize=872 ok=1
+Cmd: preprocess
+  insize=2713 outsize=871 ok=1
+Cmd: preprocess
+  insize=2731 outsize=889 ok=1
+Cmd: preprocess
+  insize=1412 outsize=292 ok=1
+Cmd: preprocess
+  insize=1360 outsize=629 ok=1
+Cmd: preprocess
+  insize=1424 outsize=304 ok=1
+Cmd: preprocess
+  insize=1424 outsize=304 ok=1
+Cmd: preprocess
+  insize=1424 outsize=304 ok=1
+Cmd: preprocess
+  insize=2982 outsize=479 ok=1
+Cmd: preprocess
+  insize=2981 outsize=478 ok=1
+Cmd: preprocess
+  insize=2290 outsize=413 ok=1
+Cmd: preprocess
+  insize=2290 outsize=413 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=2319 outsize=834 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=2319 outsize=1314 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: preprocess
+  insize=1421 outsize=301 ok=1

@@ -13,12 +13,6 @@ public class PostEffectsBase : MonoBehaviour
     {
         CheckResources();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     #endregion
 
     #region 方法
@@ -51,26 +45,36 @@ public class PostEffectsBase : MonoBehaviour
     protected Material CheckShaderAndCreateMaterial(Shader shader,Material material)
     {
         //检查shader和material的可用性
-        if(shader = null)
-        {
-            return null;
-        }
-        if (shader.isSupported && material && material.shader == shader)
-            return material;
+        //if(shader = null)
+        //{
+        //    return null;
+        //}
+        //if (shader.isSupported && material && material.shader == shader)
+        //    return material;
 
-        if (!shader.isSupported)
+        //if (!shader.isSupported)
+        //{
+        //    return null;
+        //}
+        //else
+        //{
+        //    material = new Material(shader);
+        //    material.hideFlags = HideFlags.DontSave;
+        //    if (material)
+        //        return material;
+        //    else
+        //        return null;
+        //}
+
+        if(shader == null || !shader.isSupported)
         {
             return null;
         }
-        else
-        {
-            material = new Material(shader);
-            material.hideFlags = HideFlags.DontSave;
-            if (material)
-                return material;
-            else
-                return null;
-        }
+        if (material && material.shader == shader)
+            return material;
+        material = new Material(shader);
+        material.hideFlags = HideFlags.DontSave;
+        return material;
     }
 
     #endregion
