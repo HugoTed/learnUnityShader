@@ -392,6 +392,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bloomShader: {fileID: 4800000, guid: fd56304ab67e29d4c835a9fddcffaedd, type: 3}
   iterations: 3
-  blurSpread: 1.86
+  blurSpread: 0.54
   downSample: 8
   luminanceThreshold: 4
