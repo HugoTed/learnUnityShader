@@ -12,7 +12,7 @@ Shader "Unity Shaders Book/Chapter 7/C7-RampTexture"
 	}
 	SubShader
 	{
-		
+		Tags { "RenderType"="Opaque" "Queue"="Geometry"}
 		Pass
 		{
 			Tags{"LightMode" = "ForwardBase"}
@@ -72,4 +72,5 @@ Shader "Unity Shaders Book/Chapter 7/C7-RampTexture"
 			ENDCG
 		}
 	}
+	 Fallback "Specular"
 }

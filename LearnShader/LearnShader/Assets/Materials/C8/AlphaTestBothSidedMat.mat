@@ -5,9 +5,10 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: AlphaTestBothSidedMat
-  m_Shader: {fileID: 4800000, guid: 8ef912886f572bf478db68bd6531f361, type: 3}
+  m_Shader: {fileID: 4800000, guid: e91d5c9487430864babf996e87ce4278, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -57,7 +58,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _CutOff: 0.786
-    - _Cutoff: 0.5
+    - _Cutoff: 0.708
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1

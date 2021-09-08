@@ -6,9 +6,10 @@
     }
     SubShader
     {
-       
+       Tags { "RenderType"="Opaque" "Queue"="Geometry"}
         Pass
         {
+            
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag 
@@ -53,4 +54,5 @@
             ENDCG
         }
     }
+        Fallback "Diffuse" 
 }

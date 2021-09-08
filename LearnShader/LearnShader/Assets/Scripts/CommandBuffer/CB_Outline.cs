@@ -10,12 +10,15 @@ public class CB_Outline : MonoBehaviour
     public GameObject target = null;
     [Range(0f,10f)]
     public float blurSzie = 1.0f;
+
+    public Color color;
     public Shader pureShader;
     public Shader GBShader;
     public Shader MinusShader;
 
     private Material GBMaterial;
     private Material MinusMat;
+    private Material ColorMat;
     public Material GBmat
     {
         get
@@ -40,6 +43,18 @@ public class CB_Outline : MonoBehaviour
             return MinusMat;
         }
     }
+    public Material ColMat
+    {
+        get
+        {
+            if (ColorMat == null)
+            {
+                ColorMat = new Material(pureShader);
+                return ColorMat;
+            }
+            return ColorMat;
+        }
+    }
     private void OnEnable()
     {
         Camera.main.RemoveAllCommandBuffers();
@@ -54,7 +69,7 @@ public class CB_Outline : MonoBehaviour
 
         cb.ClearRenderTarget(true, true, Color.black);
 
-        cb.DrawRenderer(tr, new Material(pureShader));
+        cb.DrawRenderer(tr, ColMat);
         RenderTexture rt2 = RenderTexture.GetTemporary(1024, 1024, 16, RenderTextureFormat.ARGB32,
             RenderTextureReadWrite.Default, 4);
 
@@ -65,7 +80,7 @@ public class CB_Outline : MonoBehaviour
 
         MinMat.SetTexture("_OtherTex", rt);
         cb.Blit(rt3, rt2, MinMat);
-
+       
         this.GetComponent<Renderer>().sharedMaterial.mainTexture = rt2;
 
         Camera.main.AddCommandBuffer(CameraEvent.AfterForwardOpaque, cb);
@@ -73,6 +88,8 @@ public class CB_Outline : MonoBehaviour
 
     private void Update()
     {
+        ColMat.SetColor("_Color", color);
         GBmat.SetFloat("_BlurSzie", blurSzie);
+        
     }
 }

@@ -6,7 +6,9 @@
 		_ReflectAmount("Reflect Amount",Range(0,1)) = 1
 		_Cubemap("Reflection Cubemap",Cube) = "_Skybox"{}
 	}
-	SubShader{
+	SubShader
+	{
+		Tags { "RenderType"="Opaque" "Queue"="Geometry"}
 		Pass{
 			Tags{"LightMode"="ForwardBase"}
 			CGPROGRAM

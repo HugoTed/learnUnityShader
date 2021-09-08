@@ -47,8 +47,8 @@
                 // sample the texture
                 fixed4 col = tex2D(_MainTex, i.uv);
                 fixed4 ocol = tex2D(_OtherTex,i.uv);
-               
-                return fixed4(col.rgb - ocol.rgb,1);
+                
+                return fixed4(col.rgb + ocol.rgb,1);
             }
             ENDCG
         }

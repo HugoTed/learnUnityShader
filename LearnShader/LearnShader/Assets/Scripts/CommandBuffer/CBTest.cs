@@ -5,7 +5,6 @@ using UnityEngine.Rendering;
 
 public class CBTest : MonoBehaviour
 {
-    public Shader shader;
     private CommandBuffer cb;
     private RenderTexture rt;
     public GameObject tarObj;

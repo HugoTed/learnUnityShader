@@ -2,7 +2,7 @@
 {
     Properties
     {
-       
+       _Color("Color Tint",Color) = (0,1,0,1)
     }
     SubShader
     {
@@ -28,6 +28,8 @@
                 float4 vertex : SV_POSITION;
             };
 
+            fixed4 _Color;
+
 
             v2f vert (appdata v)
             {
@@ -40,7 +42,7 @@
             fixed4 frag (v2f i) : SV_Target
             {
                
-                return fixed4(0,1,0,1);
+                return _Color;
             }
             ENDCG
         }
