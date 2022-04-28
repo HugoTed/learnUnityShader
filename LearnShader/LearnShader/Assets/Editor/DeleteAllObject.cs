@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DeleteAllObject : MonoBehaviour
 {
+    
     //[MenuItem("My Tool/DeleteAllObj",true)]
     //第一个参数表示菜单路径
     //第二个参数表示是否为有效函数,是否需要显示

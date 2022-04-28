@@ -5,10 +5,15 @@ Shader "Unity Shaders Book/Chapter 14/Toon Shading" {
 	Properties {
 		_Color ("Color Tint", Color) = (1, 1, 1, 1)
 		_MainTex ("Main Tex", 2D) = "white" {}
+	//控制漫反射色调的渐变纹理
 		_Ramp ("Ramp Texture", 2D) = "white" {}
+		//控制轮廓线宽度
 		_Outline ("Outline", Range(0, 1)) = 0.1
+			//控制轮廓线颜色
 		_OutlineColor ("Outline Color", Color) = (0, 0, 0, 1)
+			//高光反射颜色
 		_Specular ("Specular", Color) = (1, 1, 1, 1)
+			//高光反射阈值
 		_SpecularScale ("Specular Scale", Range(0, 0.1)) = 0.01
 	}
     SubShader {
@@ -16,7 +21,7 @@ Shader "Unity Shaders Book/Chapter 14/Toon Shading" {
 		
 		Pass {
 			NAME "OUTLINE"
-			
+			//这个pass只渲染背面，所以要设置cull front把正面的三角面剔除掉。
 			Cull Front
 			
 			CGPROGRAM
@@ -40,11 +45,13 @@ Shader "Unity Shaders Book/Chapter 14/Toon Shading" {
 			
 			v2f vert (a2v v) {
 				v2f o;
-				
+				//把顶点和法线变换到视角空间下，让描边在观察空间达到最好的效果
 				float4 pos = mul(UNITY_MATRIX_MV, v.vertex); 
 				float3 normal = mul((float3x3)UNITY_MATRIX_IT_MV, v.normal);  
+				//设置法线的z值，避免背面扩展顶点后挡住正面
 				normal.z = -0.5;
 				pos = pos + float4(normalize(normal), 0) * _Outline;
+				//最后把视角空间变换到裁剪空间
 				o.pos = mul(UNITY_MATRIX_P, pos);
 				
 				return o;
@@ -58,6 +65,7 @@ Shader "Unity Shaders Book/Chapter 14/Toon Shading" {
 		}
 		
 		Pass {
+				//使光照被正确赋值
 			Tags { "LightMode"="ForwardBase" }
 			
 			Cull Back
@@ -128,6 +136,7 @@ Shader "Unity Shaders Book/Chapter 14/Toon Shading" {
 				fixed3 diffuse = _LightColor0.rgb * albedo * tex2D(_Ramp, float2(diff, diff)).rgb;
 				
 				fixed spec = dot(worldNormal, worldHalfDir);
+				//抗锯齿
 				fixed w = fwidth(spec) * 2.0;
 				fixed3 specular = _Specular.rgb * lerp(0, 1, smoothstep(-w, w, spec + _SpecularScale - 1)) * step(0.0001, _SpecularScale);
 				

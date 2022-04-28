@@ -32,6 +32,7 @@ public class MotionBlurWithDepthTexture : PostEffectsBase
     }
     //前一帧的视角*投影矩阵
     private Matrix4x4 previousViewProjectionMatrix;
+    private Matrix4x4 preViewMatrix;
 
     private void OnEnable()
     {
@@ -46,11 +47,16 @@ public class MotionBlurWithDepthTexture : PostEffectsBase
             material.SetFloat("_BlurSize", blurSzie);
 
             material.SetMatrix("_PreviousViewProjectionMatrix", previousViewProjectionMatrix);
+            material.SetMatrix("_PreViewInvMatrix", preViewMatrix);
             //当前帧的视角*投影矩阵
             Matrix4x4 currentViewProjectionMatrix = camera.projectionMatrix * camera.worldToCameraMatrix;
             Matrix4x4 currentViewProjectionInverseMatrix = currentViewProjectionMatrix.inverse;
+            Matrix4x4 currentViewMatrix = camera.worldToCameraMatrix;
+            Matrix4x4 currentViewInvMatrix = camera.worldToCameraMatrix.inverse;
             material.SetMatrix("_CurrentViewProjectionInverseMatrix", currentViewProjectionInverseMatrix);
+            material.SetMatrix("_ViewInvMatrix", currentViewInvMatrix);
             previousViewProjectionMatrix = currentViewProjectionMatrix;
+            preViewMatrix = currentViewMatrix;
 
             Graphics.Blit(source, destination, material);
         }
