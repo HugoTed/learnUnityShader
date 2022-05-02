@@ -24,4 +24,18 @@ float3 FlowUVW(float2 uv, float2 flowVector, float2 jump, float flowOffset, floa
     return uvw;
 }
 
+float2 DirectionalFlow(
+    float2 uv, float3 flowVectorAndSpeed, float tiling, float time,
+    out float2x2 rotation
+){
+    float2 dir = normalize(flowVectorAndSpeed.xy);
+    rotation = float2x2(dir.y, dir.x, -dir.x, dir.y);
+    //构造旋转矩阵
+    // [y  x]
+    // [-x y]
+    uv = mul(float2x2(dir.y, -dir.x, dir.x, dir.y), uv);
+    uv.y -= time * flowVectorAndSpeed.z;
+    return uv * tiling;
+}
+
 #endif
