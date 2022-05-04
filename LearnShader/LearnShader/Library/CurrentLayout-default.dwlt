@@ -112,9 +112,9 @@ MonoBehaviour:
     width: 1920
     height: 947
   m_MinSize: {x: 881, y: 492}
-  m_MaxSize: {x: 18002, y: 14042}
+  m_MaxSize: {x: 18004, y: 14042}
   vertical: 1
-  controlID: 163
+  controlID: 150
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,9 +137,9 @@ MonoBehaviour:
     width: 1920
     height: 947
   m_MinSize: {x: 881, y: 492}
-  m_MaxSize: {x: 18002, y: 14042}
+  m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 164
+  controlID: 151
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -162,9 +162,9 @@ MonoBehaviour:
     width: 1501
     height: 947
   m_MinSize: {x: 605, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MaxSize: {x: 14003, y: 14042}
   vertical: 1
-  controlID: 165
+  controlID: 152
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_MinSize: {x: 605, y: 221}
   m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
-  controlID: 166
+  controlID: 153
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -291,10 +291,10 @@ MonoBehaviour:
     y: 448
     width: 1501
     height: 499
-  m_MinSize: {x: 331, y: 271}
-  m_MaxSize: {x: 14001, y: 10021}
+  m_MinSize: {x: 333, y: 271}
+  m_MaxSize: {x: 14003, y: 10021}
   vertical: 0
-  controlID: 100
+  controlID: 108
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -559,9 +559,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.003752984, y: -0.0029169917, z: -0.0031715631}
+    m_Target: {x: -3.3395987, y: -4.416793, z: -5.615546}
     speed: 2
-    m_Value: {x: 0.003752984, y: -0.0029169917, z: -0.0031715631}
+    m_Value: {x: -3.3395987, y: -4.416793, z: -5.615546}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -607,13 +607,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.4066861, y: -0.009004274, z: 0.0040662675, w: 0.9136073}
+    m_Target: {x: 0.395694, y: -0.009053712, z: 0.003955016, w: 0.91842216}
     speed: 2
-    m_Value: {x: 0.40665162, y: -0.009003512, z: 0.004065923, w: 0.9135299}
+    m_Value: {x: 0.39290345, y: -0.009064767, z: 0.003927493, w: 0.9195267}
   m_Size:
-    m_Target: 0.707107
+    m_Target: 49.727097
     speed: 2
-    m_Value: 0.707107
+    m_Value: 52.07026
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -741,20 +741,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Shaders/WaterFlow
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Shaders/WaterFlow
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\zark\Documents\web\git\learnUnityShader\LearnShader\LearnShader
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 454}
-    m_SelectedIDs: ee3c0000
-    m_LastClickedID: 15598
-    m_ExpandedIDs: 000000006a3c00006c3c00006e3c0000703c0000b23c0000b43c000000ca9a3b
+    scrollPos: {x: 0, y: 22}
+    m_SelectedIDs: 6a3c0000
+    m_LastClickedID: 15466
+    m_ExpandedIDs: 000000006a3c00006c3c00006e3c0000703c0000843c0000b43c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -810,7 +810,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000000000008e3e0000743d0000
+    m_ExpandedInstanceIDs: c62300008e3e0000743d000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -979,7 +979,7 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 264
+  m_LastVerticalScrollValue: 0
 --- !u!114 &25
 MonoBehaviour:
   m_ObjectHideFlags: 52
